@@ -8,3 +8,18 @@ body{
     margin-top: 150px;
     background-color: var(--bs-white);
 }
+
+.password__copy{
+    width: 80%;
+}
+
+.password__len{
+    width: 500px;
+}
+
+.password__len__text{
+    width: 300px;
+}
+.password__range{
+    width: 500px;
+}

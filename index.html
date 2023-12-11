@@ -9,13 +9,36 @@
     <link rel="stylesheet" href="./assets/styles/main.css">
     <!-- JQuery script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Font Awesome script -->
+    <script src="https://kit.fontawesome.com/e1f6be75b8.js" crossorigin="anonymous"></script>
     <title>Password Generator</title>
 </head>
 <body>
-    <div class="container-md">
-        <div class="card">
-            <div class="row align-items-center">
-                <div class="col">Password Generator</div>
+    <div class="container-sm p-0">
+        <div class="card justify-content-center">
+            <h1 class="text-center my-4">Password Generator</h1>
+            <div class="password__copy mt-3 mx-auto">
+                <div class="input-group">
+                    <input type="text" class="form-control text-center bg-body" placeholder="Generated password" aria-label="Generated password" aria-describedby="button-addon2" disabled readonly>
+                    <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fa-solid fa-copy"></i></button>
+                </div>
+            </div>
+            <div class="input-group password__len mt-5 mx-auto">
+                <span class="input-group-text password__len__text justify-content-center">Password length</span>
+                <input type="number" aria-label="First name" class="form-control text-center">
+            </div>
+            <div class="password__range mx-auto mt-2">
+                <input type="range" class="form-range" min="16" max="32" id="password__range">
+            </div>
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                </div>
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                </div>
             </div>
         </div>
     </div>
