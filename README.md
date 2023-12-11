@@ -1,1 +1,2 @@
-# Basic website template with Bootstrap and JQuery included
+# Basic password generator.
+## Made as on lessson project.
