@@ -14,12 +14,18 @@ body{
 }
 
 .password__len{
-    width: 500px;
+    width: 90%;
 }
 
 .password__len__text{
-    width: 300px;
+    width: 60%;
 }
 .password__range{
-    width: 500px;
+    width: 90%;
+}
+.password__properties{
+    width: 90%
+}
+.password__properties__item{
+    width: 226px;
 }
