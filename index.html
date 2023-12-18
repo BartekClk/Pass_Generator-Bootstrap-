@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="./assets/styles/main.css">
     <!-- JQuery script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- jQuery UI -->
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <!-- Font Awesome script -->
     <script src="https://kit.fontawesome.com/e1f6be75b8.js" crossorigin="anonymous"></script>
     <title>Password Generator</title>
@@ -25,51 +28,54 @@
                             <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fa-solid fa-copy"></i></button>
                         </div>
                     </div>
-                    <div class="col col-12">
-                        <div class="row">
-                            <div class="col col-12 col-md-10 col-lg-8 col-xl-6 d-flex justify-content-center mx-auto">
-                                <div class="input-group password__len mt-5">
-                                    <span class="input-group-text password__len__text justify-content-center">Password length</span>
-                                    <input type="number" aria-label="First name" class="form-control text-center">
+                    <div class="col col-12 row">
+                        <div class="col col-12 col-md-10 col-lg-8 col-xl-6 d-flex justify-content-center mx-auto">
+                            <div class="input-group password__len mt-5">
+                                <span class="input-group-text password__len__text justify-content-center">Password length</span>
+                                <input type="number" aria-label="First name" class="form-control text-center" value="16" id="password__len">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 row">
+                        <div class="col col-12 col-md-10 col-lg-8 col-xl-6 d-flex justify-content-center mx-auto">
+                            <div class="password__range mt-2" id="range_box">
+                                <input type="range" class="form-range" min="16" max="64" value="16" id="password__range">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 row text-center password__properties mt-3 row-gap-5 column-gap-2 justify-content-center">
+                        <div class="col col-12 col-md-8">
+                            <div class="grid row row-gap-3">
+                                <div class="col col-12 col-sm-6 d-flex justify-content-center">
+                                    <div class="form-check form-switch password__properties__item">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="uppercase_letters" checked>
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Uppercase letters</label>
+                                    </div>
+                                </div>
+                                <div class="col col-12 col-sm-6 d-flex justify-content-center">
+                                    <div class="form-check form-switch password__properties__item">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="lowercase_letters" checked>
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Lowercase letters</label>
+                                    </div>
+                                </div>
+                                <div class="col col-12 col-sm-6 d-flex justify-content-center">
+                                    <div class="form-check form-switch password__properties__item">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="numbers" checked>
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Numbers</label>
+                                    </div>
+                                </div>
+                                <div class="col col-12 col-sm-6 d-flex justify-content-center">
+                                    <div class="form-check form-switch password__properties__item">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="special_signs" checked>
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Special signs</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col col-12">
-                        <div class="row">
-                            <div class="col col-12 col-md-10 col-lg-8 col-xl-6 d-flex justify-content-center mx-auto">
-                                <div class="password__range mt-2">
-                                    <input type="range" class="form-range" min="16" max="32" id="password__range">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container text-center password__properties mt-3 row-gap-5 column-gap-3">
-                    <div class="grid row">
-                        <div class="col col-12 col-sm-6 d-flex justify-content-center">
-                            <div class="form-check form-switch password__properties__item">
-                            <input class="form-check-input" type="checkbox" role="switch" id="uppercase_letters">
-                            <label class="form-check-label" for="flexSwitchCheckDefault">Uppercase letters</label>
-                            </div>
-                        </div>
-                        <div class="col col-12 col-sm-6 d-flex justify-content-center">
-                            <div class="form-check form-switch password__properties__item">
-                                <input class="form-check-input" type="checkbox" role="switch" id="lowercase_letters">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">Lowercase letters</label>
-                            </div>
-                        </div>
-                        <div class="col col-12 col-sm-6 d-flex justify-content-center">
-                            <div class="form-check form-switch password__properties__item">
-                                <input class="form-check-input" type="checkbox" role="switch" id="numbers">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">Numbers</label>
-                            </div>
-                        </div>
-                        <div class="col col-12 col-sm-6 d-flex justify-content-center">
-                            <div class="form-check form-switch password__properties__item">
-                                <input class="form-check-input" type="checkbox" role="switch" id="special_signs">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">Special signs</label>
-                            </div>
+                    <div class="col col-12 row justify-content-center mt-4 mb-5">
+                        <div class="col col-4 justify-content-center d-flex">
+                            <button type="button" id="generate" class="btn btn-primary mt-3 password__generate">Generate password</button>
                         </div>
                     </div>
                 </div>
